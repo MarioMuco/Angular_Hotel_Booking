@@ -8,27 +8,6 @@ import slugify from 'slugify';
   template: `
     <div class="filters-card-container">
       <div *ngIf="data.isLoading$ | async">Loading...</div>
-      <!-- Filter -->
-      <div class="accommodation-list">
-        <section class="hotel section-container">
-          <h6>Hotels</h6>
-          <p>{{ data.hotelCount }} places</p>
-        </section>
-        <section class="motel section-container">
-          <h6>Motels</h6>
-          <p>{{ data.motelCount }} places</p>
-        </section>
-        <section class="resort section-container">
-          <h6>Resorts</h6>
-          <p>{{ data.resortCount }} places</p>
-        </section>
-      </div>
-      <!--Showing Places-->
-      <div class="show-places-container">
-        <p>
-          Showing 4 of <span>{{ data.totalCount }} places</span>
-        </p>
-      </div>
 
       <!--Carts-->
       <div class="card-container" *ngFor="let hotel of hotels | slice : 0 : 4">
@@ -56,9 +35,6 @@ import slugify from 'slugify';
           </section>
           <br />
           <section class="card-buttons">
-            <button class="card-button-icon">
-              <img src="assets/icons/heart.svg" alt="heart_icon" />
-            </button>
             <button class="card-button-view" (click)="viewPlace(hotel.name)">
               View Place
             </button>

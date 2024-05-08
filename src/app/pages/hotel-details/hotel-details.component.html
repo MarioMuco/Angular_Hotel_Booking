@@ -43,16 +43,6 @@
   </div>
 </div>
 
-<div class="hotel-photo-container">
-  <img alt="" class="big-image" [src]="hotel?.photos[0]" />
-  <div class="small-images">
-    <img alt="" class="img" [src]="hotel?.photos[1]" />
-    <img alt="" class="img-top-right" [src]="hotel?.photos[2]" />
-    <img alt="" class="img" [src]="hotel?.photos[3]" />
-    <img alt="" class="img-top-left" [src]="hotel?.photos[4]" />
-  </div>
-</div>
-
 <div class="hotel-overview">
   <div class="overview-frame">
     <h3 class="overview-title">Overview</h3>
@@ -85,7 +75,6 @@
   </div>
   <div *ngFor="let room of hotel.rooms" class="rooms-details-container">
     <div class="rooms-name">
-      <img [src]="hotel.photos[0]" alt="" />
       <span>{{ room.name }}</span>
     </div>
     <div class="rooms-price">
@@ -95,12 +84,5 @@
   </div>
 </div>
 
-<hr />
 
-<div class="amenities-container">
-  <h3>Amenities</h3>
-  <div *ngFor="let amenities of hotel.amenities" class="amenities">
-    {{ amenities }}
-  </div>
-</div>
 
