@@ -8,49 +8,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  template: `
-    <div class="login-container">
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="login-inputs-container">
-          <button class="back-button" (click)="backToHome()">&#8592;</button>
-          <h1 class="logo">Kagan Booking</h1>
-          <h3 class="login-title">Login</h3>
-          <p class="login-description">
-            Login to access your Kagan Booking account
-          </p>
-          <section class="input-container">
-            <input type="email" placeholder="e-mail" formControlName="email" />
-            <input
-              type="password"
-              placeholder="password"
-              formControlName="password"
-            />
-            <span class="error-message">{{
-              loginForm.get('errorMessage')?.value
-            }}</span>
-          </section>
-          <section class="password-section">
-            <label>
-              <input type="checkbox" />
-              Remember me
-            </label>
-            <button class="forgot-password-button">Forgot Password</button>
-          </section>
-          <div class="button-container">
-            <button class="login-button">Login</button>
-            <p>
-              Don't have an account?
-              <a href="" routerLink="/sign-up" class="login-to-signup"
-                >Sign up</a
-              >
-            </p>
-            <app-social-buttons text="login"></app-social-buttons>
-          </div>
-        </div>
-      </form>
-      <div class="login-image"></div>
-    </div>
-  `,
+  templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
@@ -64,6 +22,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: '',
+      errorMessage: '', // Add this line to initialize errorMessage field
     });
   }
 

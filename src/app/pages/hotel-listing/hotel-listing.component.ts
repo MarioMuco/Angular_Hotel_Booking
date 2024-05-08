@@ -11,15 +11,7 @@ import {
 
 @Component({
   selector: 'app-hotel-listing',
-  template: `
-    <app-navbar class="active"></app-navbar>
-    <div class="hotels-listing-container">
-      <!-- <app-hotels-filters></app-hotels-filters> -->
-      <app-filters-card [data]="data"></app-filters-card>
-    </div>
-    <app-newsletter style="position: relative; top: +240px;"></app-newsletter>
-    <app-footer></app-footer>
-  `,
+  templateUrl: './hotel-listing.component.html',
   styleUrls: ['./hotel-listing.component.css'],
 })
 export class HotelListingComponent implements OnInit {
