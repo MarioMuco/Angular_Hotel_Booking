@@ -7,9 +7,6 @@ import { Component, AfterViewInit } from '@angular/core';
     <div class="header-container">
       <app-navbar></app-navbar>
       <div class="header-content-container">
-        <p>{{ HeaderTitle }}</p>
-        <p>{{ HeaderSubTitle }}</p>
-        <p>{{ HeaderDescription }}</p>
       </div>
     </div>
     <!-- Template End -->

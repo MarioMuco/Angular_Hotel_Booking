@@ -30,7 +30,7 @@ import { loggedInUserSelector } from 'src/app/features/auth/store/auth.selectors
           </button>
         </li>
         <li class="company-name">
-          <h3 routerLink="/">Kagan Booking</h3>
+          <h3 routerLink="/">Hotel Booking</h3>
         </li>
 
         <li

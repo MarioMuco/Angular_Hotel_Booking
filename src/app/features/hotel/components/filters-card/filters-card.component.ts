@@ -28,7 +28,6 @@ import slugify from 'slugify';
         <p>
           Showing 4 of <span>{{ data.totalCount }} places</span>
         </p>
-        <p>Sort by <span>Recommended</span></p>
       </div>
 
       <!--Carts-->

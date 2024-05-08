@@ -15,7 +15,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'hotel-listing',
+    path: 'hotel-listing', 
     component: HotelListingComponent,
   },
   {

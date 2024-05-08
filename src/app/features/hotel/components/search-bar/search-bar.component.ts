@@ -105,7 +105,6 @@ import { updateSearchBar } from '../../store/search/search.action';
             </ng-template>
           </section>
           <section class="buttons-container">
-            <button type="button" class="button-promo">+ Add Promo Code</button>
             <button type="submit" class="button-show-place">Show Places</button>
           </section>
         </form>
