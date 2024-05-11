@@ -11,6 +11,7 @@ export interface AuthSignupModel {
   phoneNumber: number;
   password: string;
 }
+
 export interface UserModel {
   _id: string;
   firstName: string;

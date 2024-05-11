@@ -44,7 +44,7 @@ export class SignUpComponent implements OnInit {
           '',
           [
             Validators.required,
-            Validators.pattern('^\\d{11}$'),
+            Validators.pattern('^\\d{10}$'),
             Validators.minLength(11),
             Validators.maxLength(11),
           ],

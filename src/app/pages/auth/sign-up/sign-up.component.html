@@ -7,7 +7,7 @@
       [formGroup]="signUpForm"
       (ngSubmit)="onSubmit()"
     >
-      <h1 class="logo">Kagan Booking</h1>
+      <h1 class="logo">Hotel Booking</h1>
   
       <h3 class="login-title">Sign up</h3>
       <p class="login-description">
@@ -83,7 +83,7 @@
             signUpForm.get('phoneNumber')?.errors?.['required']
               ? '* Phone number is required'
               : signUpForm.get('phoneNumber')?.errors?.['pattern']
-              ? '* Phone number must be 11 digits'
+              ? '* Phone number must be 10 digits'
               : ' '
         }}</span>
   
