@@ -1,58 +1,68 @@
-import { NgModule, isDevMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { HotelListingComponent } from './pages/hotel-listing/hotel-listing.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './pages/auth/login/login.component';
-import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
-import { HotelModule } from './features/hotel/hotel.module';
-import { SharedModule } from './shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
-import { AuthModule } from './features/auth/auth.module';
-import { AccountModule } from './features/account/account.module';
-import { AccountComponent } from './pages/account/account.component';
-import { HotelDetailsComponent } from './pages/hotel-details/hotel-details.component';
-import { PaymentComponent } from './pages/payment/payment.component';
-import { SuccessPageComponent } from './pages/payment/success-page/success-page.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { AppComponent } from "./app.component";
+import { AuthInterceptor } from "./services/auth-services/auth.interceptor";
+import { SharedModule } from "./components/shared/shared.module";
+import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+
+const appRoutes: Routes = [
+  {
+    path: "",
+    redirectTo: "/hotels",
+    pathMatch: "full",
+  },
+  {
+    path: "hotels",
+    loadChildren: () =>
+      import("./components/hotels/hotels.module").then((m) => m.HotelsModule),
+  },
+  {
+    path: "miscellaneous",
+    loadChildren: () =>
+      import("./components/miscellaneous/miscellaneous.module").then(
+        (m) => m.MiscellaneousModule
+      ),
+  },
+  {
+    path: "auth",
+    loadChildren: () =>
+      import("./components/auth/auth.module").then((m) => m.AuthModule),
+  },
+  {
+    path: "payment",
+    loadChildren: () =>
+      import("./components/payment/payment.module").then(
+        (m) => m.PaymentModule
+      ),
+  },
+  {
+    path: "bookings",
+    loadChildren: () =>
+      import("./components/bookings/bookings.module").then(
+        (m) => m.BookingsModule
+      ),
+  },
+  {
+    path: "**",
+    loadChildren: () =>
+      import("./components/page-not-found/page-not-found.module").then(
+        (m) => m.PageNotFoundModule
+      ),
+  },
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    HotelListingComponent,
-    LoginComponent,
-    SignUpComponent,
-    AccountComponent,
-    HotelDetailsComponent,
-    PaymentComponent,
-    SuccessPageComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
-    AccountModule,
-    AuthModule,
-    SharedModule,
-    HotelModule,
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: !isDevMode(),
-    }),
-    NgbModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
+    SharedModule,
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
