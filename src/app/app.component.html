@@ -26,8 +26,7 @@
             </ul>
             <div class="auth ml-auto mr-2">
                 <button class="btn btn-danger text-light" (click)="onLogin()"
-                    *ngIf="!auth && !loadedAuthPage">Login</button>
-                    <!--  <button class="btn btn-danger text-light" (click)="onSignup()">Signup</button>-->
+                    *ngIf="!auth && !loadedAuthPage">Login / Sign up</button>
                 <button class="btn btn-danger text-light" (click)="onLogout()" *ngIf="auth">Logout</button>
             </div>
         </div>
@@ -42,6 +41,5 @@
 </main>
 
 <footer class="bg-secondary border-top d-flex flex-column justify-content-center align-items-center">
-    <div>Booking &copy; 2024</div>
     <a routerLink="/miscellaneous/contactus">Contact Us</a>
 </footer>

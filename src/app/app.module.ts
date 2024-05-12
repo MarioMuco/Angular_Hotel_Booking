@@ -6,6 +6,14 @@ import { AuthInterceptor } from "./services/auth-services/auth.interceptor";
 import { SharedModule } from "./components/shared/shared.module";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
+// Import Firebase initialization code
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { environment } from '../environments/environment';
+
+const app = initializeApp(environment.firebaseConfig);
+const analytics = getAnalytics(app);
+
 const appRoutes: Routes = [
   {
     path: "",

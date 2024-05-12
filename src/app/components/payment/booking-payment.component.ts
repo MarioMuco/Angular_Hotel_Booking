@@ -66,10 +66,10 @@ export class BookingPaymentComponent implements OnInit, OnDestroy {
       }
     );
 
-    this._address = "200, Fictional Street, Gurugram";
-    this._nameOnCard = "Testy Tester";
+    this._address = "Tirana, Albania";
+    this._nameOnCard = "Mario Muco";
     this._cardNumber = 1234567890123456;
-    this._expiryDate = "11/27";
+    this._expiryDate = "12/29";
 
     this.userSub = this.aservice.User.subscribe((user) => {
       this.user = user;
