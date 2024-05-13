@@ -1,3 +1,32 @@
 .no-orders {
   height: 78vh;
 }
+
+#deleteBooking {
+  border:rgba(236, 34, 34, 0.788);  
+  color: white; 
+  background-color:rgba(236, 34, 34, 0.788);
+  margin: 2px;
+}
+
+#printBooking {
+  border:rgba(16, 80, 255, 0.788);  
+  color: white; 
+  background-color:rgba(16, 80, 255, 0.788);
+  margin: 2px;
+}
+#deleteBooking:hover {
+  border:rgba(236, 34, 34, 0.5);  
+  color: white; 
+  background-color:rgba(236, 34, 34, 0.5);
+  margin: 2px;
+}
+
+#printBooking:hover{
+  border:rgba(16, 80, 255, 0.5);  
+  color: white; 
+  background-color:rgba(16, 80, 255, 0.5);
+  margin: 2px;
+}
+
+

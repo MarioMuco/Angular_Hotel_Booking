@@ -16,12 +16,22 @@ export class BookingsComponent implements OnInit {
     fromDate: string;
     toDate: string;
     totalAmount: number;
+    deleted: boolean;
   }[] = [];
 
   constructor(private aroute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.user = this.aroute.snapshot.data["res2"].user;
-    this.displayBookingCarts = this.aroute.snapshot.data["res2"].res;
+    this.displayBookingCarts = this.aroute.snapshot.data["res2"].res.map(booking => ({ ...booking, deleted: false }));
   }
+
+  printBooking() {
+    window.print();
+  }
+
+  deleteBooking(index: number) {
+    this.displayBookingCarts[index].deleted = true;
+  }
+
 }

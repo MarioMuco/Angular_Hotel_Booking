@@ -5,11 +5,15 @@
     <div *ngIf="displayBookingCarts.length" class="mb-5">
         <div class="lead text-center mb-3">Hello, {{user.email}} here are your bookings: </div>
         <div *ngFor="let cart of displayBookingCarts; let i=index">
-            <h3 class="display-4 text-center">{{"Booking "+(i+1)}}</h3>
-            <div class="card mb-4">
+            <div *ngIf="!cart.deleted" class="card mb-4">
+                <h5 class="display-4 text-center">{{"Booking "+(i+1)}}</h5>
                 <ul class="list-group">
                     <li class="list-group-item text-center">
                         {{cart.hotel.name}}
+                    </li>
+                    <li class="list-group-item text-center">
+                        <button (click)="printBooking()" id="printBooking"  >Print</button>
+                        <button (click)="deleteBooking(i)" id="deleteBooking" >Delete</button>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
                         <div>Location:</div>
