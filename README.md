@@ -19,5 +19,5 @@
 ![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/b458aec4-90b9-4d74-80db-e611a10dbf13)
 
 7. Aplikacioni eshte responsive për madhësi të ndryshme ekrani.
-![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/a58372a3-708d-467a-bde4-b575105ff8a8)
+![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/9fdfcbdd-82b8-4651-8856-3191985a0276)
 
