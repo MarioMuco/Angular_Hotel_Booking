@@ -18,6 +18,6 @@
 • Pasi përdoruesi kryen rezervimin e dhomes, sistemi krijon nje fature ku ndodhen të dhënat e dhomes se rezervuar, e cila mund te printohet ose te fshihet nga sistemi
 ![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/b458aec4-90b9-4d74-80db-e611a10dbf13)
 
-7. Aplikacioni eshte responsive për madhësi të ndryshme ekrani.
+7. Aplikacioni eshte responsive për madhësi të ndryshme ekrani.  <br>
 ![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/9fdfcbdd-82b8-4651-8856-3191985a0276)
 
