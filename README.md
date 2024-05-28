@@ -6,17 +6,16 @@
 • Përdoruesi mund të bëjë rezervime për hotele te ndryshme pasi të regjistrohet.
 2. Logimi i admin-it
 • Admin mund të logohet në sistem duke përdorur kredencialet e tij. Ai ka mundësinë që të shtojë/fshijë hotele si dhe te përditësojë informacionin e nevojshëm.
-3. Kërkimi i hoteleve
+![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/76df762f-139b-4784-bb1c-2612d3a84eee)
+
+4. Kërkimi i hoteleve
 • Përdoruesi mund të kërkojë hotele në bazë të emrit te hotelit ose vendodhjes se tij.
-4. Rezervimi i dhomave
+5. Rezervimi i dhomave
 • Pasi përdoruesi është loguar, kërkon për hotele dhe informohet lidhur me dhomat e mundshme, cmimin e tyre si dhe informacione te tjera.
-5. Gjenerimi automatik i fatures
+![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/faa24ac0-5e53-4ac5-8f48-90e82e14d159)
+
+6. Gjenerimi automatik i fatures
 • Pasi përdoruesi kryen rezervimin e dhomes, sistemi krijon nje fature ku ndodhen të dhënat e dhomes se rezervuar, e cila mund te printohet ose te fshihet nga sistemi
-VII. Gjenerimi i raporteve
-• Në ndërfaqen e shoqërisë, admin mund të marrë informacione në bazë të raporteve të 
-gjeneruara automatikisht në varësi të kërkesave paraprake.
-VIII. Rolet në sisteme janë: përdoruesit fundor, menaxherët e shoqërisë dhe administratori 
-faqes.
-IX. Fushat e Biletave: id, inbound, outbound, ticket_type, ticket_type_id (kombinimi i Id dhe 
-ticket_type), price, from_date, to_date, or date_range, seat_number.
-X. Aplikacioni duhet të jetë responsive për madhësi të ndryshme ekrani.
+![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/b458aec4-90b9-4d74-80db-e611a10dbf13)
+
+7. Aplikacioni eshte responsive për madhësi të ndryshme ekrani.
