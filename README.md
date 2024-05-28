@@ -5,7 +5,7 @@
 1. Rregjistrimi dhe logimi i përdoruesit
 • Përdoruesi mund të bëjë rezervime për hotele te ndryshme pasi të regjistrohet.
 2. Logimi i admin-it
-• Admin mund të logohet në sistem duke përdorur kredencialet e tij. Ai ka mundësinë që të shtojë/fshijë hotele si dhe te përditësojë informacionin e nevojshëm.
+• Admin mund të logohet në sistem duke përdorur kredencialet e tij. Ai ka mundësinë që të shtojë/fshijë hotele si dhe te përditësojë informacionin e nevojshëm.<br>
 ![image](https://github.com/MarioMuco/Angular_Hotel_Booking/assets/45602326/76df762f-139b-4784-bb1c-2612d3a84eee)
 
 4. Kërkimi i hoteleve
