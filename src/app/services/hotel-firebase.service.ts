@@ -8,7 +8,7 @@ import { HotelService } from "./hotel.service";
   providedIn: "root",
 })
 export class HotelFirebaseService {
-  api = "https://ng-hotel-booking-default-rtdb.firebaseio.com/";
+  api = "https://hotelbooking-fd5bd-default-rtdb.europe-west1.firebasedatabase.app/";
   constructor(private http: HttpClient, private hservice: HotelService) {}
 
   addHotel(h: Hotel) {
