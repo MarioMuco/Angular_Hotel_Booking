@@ -16,20 +16,21 @@ import { FormControl, FormGroup } from "@angular/forms";
   styleUrls: ["./hotel-list.component.css"],
 })
 export class HotelListComponent implements OnInit, OnDestroy {
-  hotels: Hotel[] = [];
-  auth: boolean = false;
-  authSub: Subscription;
-  webmaster: boolean = false;
-  reactiveForm: FormGroup;
+  hotels: Hotel[] = [];  
+  auth: boolean = false;  
+  authSub: Subscription;  
+  webmaster: boolean = false;  
+  reactiveForm: FormGroup;  
 
   constructor(
-    private hservice: HotelService,
-    private hfirebase: HotelFirebaseService,
-    private authS: AuthService,
-    private router: Router,
-    private cartService: BookingCartService
+    private hservice: HotelService,  
+    private hfirebase: HotelFirebaseService, 
+    private authS: AuthService,  
+    private router: Router,  
+    private cartService: BookingCartService  
   ) {}
 
+  //merr hotelet OnInit
   ngOnInit(): void {
     this.hotels = this.hservice.getHotels();
     this.authSub = this.authS.User.subscribe((user) => {
@@ -51,6 +52,7 @@ export class HotelListComponent implements OnInit, OnDestroy {
     });
   }
 
+  
   onDelete(index: number) {
     if (confirm("Are you sure you want to delete this hotel ?"))
       this.hfirebase.deleteHotel(this.hotels[index].id).subscribe(() => {

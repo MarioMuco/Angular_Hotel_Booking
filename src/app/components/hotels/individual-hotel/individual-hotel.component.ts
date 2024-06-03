@@ -85,6 +85,7 @@ export class IndividualHotelComponent implements OnInit {
     });
   }
 
+  //pasi behet book
   onSubmit(rf: FormGroup) {
     if (!this.auth || this.webmaster) {
       this.authS.logout();
